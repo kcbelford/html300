@@ -6,17 +6,24 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <script type="text/javascript">
+    // debugger
     myArray = [13,25,10,43,435];
-    for(let i = 0; index < myArray.length -1; index++){
-      console.log(myArray[index]);
-    }
+    // for(let i = 0; i < myArray.length; i++){
+    //   console.log(myArray[i]);
+    // }
+// replaced for loop with for each loop
+    myArray.forEach(element => console.log(element))
 
-    for(let index = 0; index < myArray.length -1; index++){
-      myArray[index] = myArray[index] + 15;
-    }
-    console.log(myArray + 'Each number should 15 greater than before the loop');
+    // for(let index = 0; index < myArray.length -1; index++){
+    //   myArray[index] = myArray[index] + 15;
+    // }
+    // console.log(myArray + 'Each number should 15 greater than before the loop');
+// added map function
+    const mapArr = myArray.map(element => element += 15)
+    console.log(`${mapArr} Each number shoul be 15 greater than before the loop`);
 
-    var isAbove30 = true;
+// changed var to let
+    let isAbove30 = true;
     for(let index = 0; index < myArray.length; index++){
       if(myArray[index] < 30){
         isAbove30 = false;
