@@ -16,7 +16,7 @@ $(document).ready(function() {
     // make sure user gave a real number
     if(!isNaN(num1)) {
       // use includes to see if the value input by the user is in the array
-      const found = array1.includes(element => element === num1);
+      const found = array1.includes(num1);
       // display true or false to the user
       includesVal.text(found);
       // reset the input box to nothing
