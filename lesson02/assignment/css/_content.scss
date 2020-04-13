@@ -1,0 +1,50 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.card {
+    width: 951px;
+    height: 474px;
+    background-color: $light-blue;
+    border: 1px solid $border-gray;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__content-wrapper {
+      width: 847px;
+      height: 383px;
+      background-color: $white;
+      position: relative;
+    }
+    &__bio {
+      width: 500px;
+      height: 309px;
+      background-color: $light-gray;
+      position: absolute;
+      top: 37px;
+      right: 37px;
+    }
+    &__image-name {
+      position: relative;
+      &__image {
+        width: 14rem;
+        border-radius: 50%;
+        position: absolute;
+        left: 37px;
+      }
+
+    }
+}

@@ -1,4 +1,4 @@
-.static-block__title {
+/* .static-block__title {
   margin: 4rem 0 0;
   font-size: 1.5rem;
   font-family: arial, helvetica, sans-serif;
@@ -23,8 +23,8 @@
 }
 
 .static-block:only-of-type .static-block__content {
-	border: none;  
+	border: none;
 }
 .static-block:last-of-type .static-block__content {
 	border: none;
-}
+} */
