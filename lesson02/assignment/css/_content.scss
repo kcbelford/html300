@@ -12,11 +12,15 @@ html {
   display: flex;
   justify-content: center;
   margin-top: 5rem;
+  width: 100%;
+  // max-width: 1200px;
 }
 
 .card {
-    width: 951px;
-    height: 474px;
+    width: 59.5rem;
+    // width: 951px;
+    height: 30rem;
+    // height: 474px;
     background-color: $light-blue;
     border: 1px solid $border-gray;
     border-radius: 5px;
@@ -24,27 +28,66 @@ html {
     justify-content: center;
     align-items: center;
     &__content-wrapper {
-      width: 847px;
-      height: 383px;
+      width: 53rem;
+      // width: 847px;
+      height: 24rem;
+      // height: 383px;
       background-color: $white;
       position: relative;
     }
     &__bio {
-      width: 500px;
-      height: 309px;
+      width: 31.25rem;
+      // width: 500px;
+      height: 19rem;
+      // height: 309px;
       background-color: $light-gray;
       position: absolute;
-      top: 37px;
+      top: 40px;
       right: 37px;
+      &__content {
+        position: absolute;
+        top: 20px;
+        left: 35px;
+        display: flex;
+        flex-direction: column;
+        line-height: 2%;
+        font-size: 1.2rem;
+        color: $dark-gray;
+        font-weight: lighter;
+        font-family: $font-fam;
+        &__span {
+          font-weight: bold;
+        }
+        &__logo {
+          padding-right: 1rem;
+        }
+        &__p-flex {
+          display: flex;
+          align-items: center;
+        }
+      }
     }
     &__image-name {
       position: relative;
+      font-family: $font-fam;
       &__image {
         width: 14rem;
         border-radius: 50%;
         position: absolute;
-        left: 37px;
+        left: 40px;
+        top: 40px;
       }
-
+      &__name {
+        font-size: .75rem;
+        color: $dark-gray;
+        position: absolute;
+        left: 83px;
+        top: 280px;
+        line-height: 95%;
+        &__h2 {
+          font-style: italic;
+          font-weight: lighter;
+        }
+      }
     }
 }
