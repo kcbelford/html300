@@ -16,14 +16,7 @@ html {
 }
 // largest content box/border
 .card {
-    width: 59.5rem;
-    height: 30rem;
-    background-color: $light-blue;
-    border: 1px solid $border-gray;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include cardBorder;
     // second largest content box containing picture, name and bio
     &__content-wrapper {
       width: 53rem;
@@ -72,11 +65,7 @@ html {
       font-family: $font-fam;
       // profile image
       &__image {
-        width: 14rem;
-        border-radius: 50%;
-        position: absolute;
-        left: 40px;
-        top: 40px;
+        @include imageStyle;
       }
       // name/profession
       &__name {
