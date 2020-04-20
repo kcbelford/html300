@@ -1,0 +1,85 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  width: 100%;
+}
+// largest content box/border
+.card {
+    @include cardBorder;
+    // second largest content box containing picture, name and bio
+    &__content-wrapper {
+      width: 53rem;
+      height: 24rem;
+      background-color: $white;
+      position: relative;
+    }
+    // bio info block
+    &__bio {
+      width: 31.25rem;
+      height: 19rem;
+      background-color: $light-gray;
+      position: absolute;
+      top: 40px;
+      right: 37px;
+      // bio info content
+      &__content {
+        position: absolute;
+        top: 20px;
+        left: 35px;
+        display: flex;
+        flex-direction: column;
+        line-height: 2%;
+        font-size: 1.2rem;
+        color: $dark-gray;
+        font-weight: lighter;
+        font-family: $font-fam;
+        // bolded bio categories
+        &__span {
+          font-weight: bold;
+        }
+        // linkedin logo padding
+        &__logo {
+          padding-right: 1rem;
+        }
+        // flexblox for linkedin logo and linkedin profile
+        &__p-flex {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    // profile image and name/profession
+    &__image-name {
+      position: relative;
+      font-family: $font-fam;
+      // profile image
+      &__image {
+        @include imageStyle;
+      }
+      // name/profession
+      &__name {
+        font-size: .75rem;
+        color: $dark-gray;
+        position: absolute;
+        left: 83px;
+        top: 280px;
+        line-height: 95%;
+        // italicize profession
+        &__h2 {
+          font-style: italic;
+          font-weight: lighter;
+        }
+      }
+    }
+}
