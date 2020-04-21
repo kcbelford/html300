@@ -1,0 +1,19 @@
+// profile image styling
+@mixin imageStyle {
+  width: 14rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+// largest content box/border
+@mixin cardBorder {
+  width: 59.5rem;
+  height: 30rem;
+  background-color: $light-blue;
+  border: 1px solid $border-gray;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
