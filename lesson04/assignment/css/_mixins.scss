@@ -1,7 +1,12 @@
-// examples
-//
-// @mixin imageStyle {
-//   width: 14rem;
-//   border-radius: 50%;
-//   margin-bottom: 1rem;
-// }
+// button styling
+@mixin button {
+  cursor: pointer;
+  width: 8rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: $font-fam;
+  color: $white;
+  border-radius: 4px;
+  background-color: $button-color;
+}
