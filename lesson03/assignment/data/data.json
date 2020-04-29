@@ -1,7 +1,7 @@
 [
   {
     "name": "Steve Smith",
-    "jobTitle": "Project Manage",
+    "jobTitle": "Project Manager",
     "company": "Front End Dev Co",
     "experience": "3 years",
     "school": "UW",
@@ -11,7 +11,7 @@
     "codeLanguages": [
         "HTML", "CSS", "JavaScript", ".NET", "C#"
     ]
-  }, 
+  },
   {
     "name": "Aaron Katz",
     "jobTitle": "Full Stack Developer",
@@ -24,7 +24,7 @@
     "codeLanguages": [
         "HTML", "CSS", "JavaScript", "PHP", "Twig"
     ]
-  }, 
+  },
   {
     "name": "Kyle Hendricks",
     "jobTitle": "Starting Pitcher",
@@ -41,7 +41,7 @@
   {
     "name": "Michael Jordan",
     "jobTitle": "Point Guard",
-    "company": "Chicago Buls",
+    "company": "Chicago Bulls",
     "experience": "20 years",
     "school": "UNC",
     "major": "Trash Talking",
