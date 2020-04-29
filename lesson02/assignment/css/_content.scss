@@ -13,7 +13,6 @@ html {
   justify-content: center;
   margin-top: 5rem;
   width: 100%;
-  max-width: 1440px;
 }
 // largest content box/border
 .card {
@@ -62,24 +61,25 @@ html {
     }
     // profile image and name/profession
     &__image-name {
-      width: 36%;
       position: relative;
       font-family: $font-fam;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      top:35px;
-      font-size: .75rem;
-      color: $dark-gray;
-      line-height: 70%;
       // profile image
       &__image {
         @include imageStyle;
       }
-      // italicize profession
-      &__name__h2 {
-        font-style: italic;
-        font-weight: lighter;
+      // name/profession
+      &__name {
+        font-size: .75rem;
+        color: $dark-gray;
+        position: absolute;
+        left: 83px;
+        top: 280px;
+        line-height: 95%;
+        // italicize profession
+        &__h2 {
+          font-style: italic;
+          font-weight: lighter;
+        }
       }
     }
 }
