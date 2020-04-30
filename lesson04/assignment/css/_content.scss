@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+// the word "clink!"
+.clink {
+  font-size: 1rem;
+  text-transform: lowercase;
+  text-align: center;
+  padding-top: 12rem;
+  transform: rotate(-30deg) translate(-50px, 0);
+  font-family: $font-fam;
+  color: $white;
+}
+
+// "clink!" changes colors to appear when pints cheers
+.clink-appear {
+  color: $clink-color;
+}
+
+// images of two pint glasses
+.main {
+  margin: 0;
+  padding-top: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    &__left-pint {
+      width: 19rem;
+      padding-right: 12rem;
+      position: inherit;
+    }
+    &__right-pint {
+      width: 19rem;
+      padding-left: 12rem;
+      position: inherit;
+    }
+}
+
+@keyframes leftpint {
+// moves left pint right and rotates it 25 degrees clockwise
+  50% {
+    transform: translate(60%, 0) rotate(25deg);
+  }
+}
+
+@keyframes rightpint {
+// moves right pint left and rotates it 25 degrees counter clockwise
+  50% {
+    transform: translate(-60%, 0) rotate(-25deg);
+  }
+}
+
+// animation lasts 2.5 seconds with a slow start and end
+.animate-left {
+  animation: leftpint 2.5s ease-in-out forwards;
+}
+
+// animation lasts 2.5 seconds with a slow start and end
+.animate-right {
+  animation: rightpint 2.5s ease-in-out forwards;
+}
+
+// "cheers!" button container
+.button-container {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+// "cheers!" button
+.button {
+  @include button;
+}
