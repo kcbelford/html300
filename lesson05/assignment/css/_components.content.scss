@@ -8,6 +8,127 @@ html {
     box-sizing: inherit;
 }
 
-.main {
-    padding: 2rem;
+.grid {
+  color: #FFFFFF;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  &__header {
+    background-color: #F1352B;
+    grid-column-start: span 4;
+    grid-row: 1 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__nav {
+    background-color: #7ACB00;
+    grid-column-start: span 4;
+    grid-row: 3 / span 1;
+    &__ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 1rem 0;
+      li {
+        list-style-type: none;
+        padding: 0;
+      }
+    }
+  }
+
+  &__main {
+    background-color: #FF6600;
+    grid-column: 2 / span 3;
+    grid-row: 4 / span 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  &__aside {
+    background-color: #6E27C5;
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__footer {
+    background-color: #150F96;
+    grid-column-start: span 4;
+    grid-row: 11 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+}
+
+.grid {
+  color: #FFFFFF;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  &__header {
+    background-color: #F1352B;
+    grid-column-start: span 4;
+    grid-row: 1 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__nav {
+    background-color: #7ACB00;
+    grid-column-start: span 4;
+    grid-row: 3 / span 1;
+    &__ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 1rem 0;
+      li {
+        list-style-type: none;
+        padding: 0;
+      }
+    }
+  }
+
+  &__main {
+    background-color: #FF6600;
+    grid-column: 2 / span 3;
+    grid-row: 4 / span 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  &__aside {
+    background-color: #6E27C5;
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__footer {
+    background-color: #150F96;
+    grid-column-start: span 4;
+    grid-row: 11 / span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
