@@ -367,96 +367,93 @@ html {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(12, 1fr); }
   .grid__header {
-    background-color: #F1352B;
+    background-color: #FFFFFF;
     grid-column-start: span 4;
     grid-row: 1 / span 2;
     display: flex;
     justify-content: center;
     align-items: center; }
+    .grid__header__logo {
+      width: 20rem; }
   .grid__nav {
-    background-color: #7ACB00;
+    background-color: #d3f3f0;
     grid-column-start: span 4;
     grid-row: 3 / span 1; }
     .grid__nav__ul {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
-      padding: 1rem 0; }
-      .grid__nav__ul li {
+      padding: 0; }
+      .grid__nav__ul__li {
+        font-size: 1rem;
         list-style-type: none;
-        padding: 0; }
+        color: #323232;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        align-self: center; }
   .grid__main {
-    background-color: #FF6600;
+    background-color: #FFFFFF;
     grid-column: 2 / span 3;
     grid-row: 4 / span 7;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    padding: 3rem 4rem 3rem 6rem; }
+    .grid__main__h1 {
+      font-size: 1.5rem;
+      color: #323232;
+      font-weight: normal;
+      letter-spacing: 0.15rem; }
+    .grid__main__h2 {
+      font-size: 0.75rem;
+      color: #949494;
+      font-weight: lighter;
+      letter-spacing: 0.1rem; }
+    .grid__main__img {
+      width: 35rem;
+      padding: 2rem 0; }
+    .grid__main__p {
+      font-size: 1rem;
+      color: #323232;
+      line-height: 2rem; }
+    .grid__main__more {
+      font-size: 1rem;
+      color: #323232;
+      text-transform: uppercase; }
   .grid__aside {
-    background-color: #6E27C5;
+    background-color: #FFFFFF;
     grid-column: 1 / span 1;
     grid-row: 4 / span 7;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    padding-left: 4rem; }
+    .grid__aside__h1 {
+      color: #323232;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      font-weight: lighter;
+      letter-spacing: 0.15rem; }
+    .grid__aside__p {
+      color: #323232;
+      font-size: 1rem;
+      line-height: 2rem; }
+    .grid__aside__more {
+      color: #323232;
+      font-size: 1rem;
+      text-transform: uppercase; }
+    .grid__aside__img {
+      width: 15rem;
+      padding-top: 4rem; }
   .grid__footer {
-    background-color: #150F96;
+    background-color: #d3f3f0;
+    color: #323232;
+    text-transform: capitalize;
     grid-column-start: span 4;
     grid-row: 11 / span 2;
     display: flex;
     justify-content: center;
-    align-items: center; }
-
-html {
-  box-sizing: border-box; }
-
-*,
-*:after,
-*:before {
-  box-sizing: inherit; }
-
-.grid {
-  color: #FFFFFF;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(12, 1fr); }
-  .grid__header {
-    background-color: #F1352B;
-    grid-column-start: span 4;
-    grid-row: 1 / span 2;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .grid__nav {
-    background-color: #7ACB00;
-    grid-column-start: span 4;
-    grid-row: 3 / span 1; }
-    .grid__nav__ul {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      padding: 1rem 0; }
-      .grid__nav__ul li {
-        list-style-type: none;
-        padding: 0; }
-  .grid__main {
-    background-color: #FF6600;
-    grid-column: 2 / span 3;
-    grid-row: 4 / span 7;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .grid__aside {
-    background-color: #6E27C5;
-    grid-column: 1 / span 1;
-    grid-row: 4 / span 7;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .grid__footer {
-    background-color: #150F96;
-    grid-column-start: span 4;
-    grid-row: 11 / span 2;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
+    align-items: center;
+    letter-spacing: 0.15rem; }
