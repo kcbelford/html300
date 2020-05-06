@@ -5,11 +5,58 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="icon" href="./assets/tch-favicon.png" type="image/gif" sizes="16x16">
         <title>Assignment 05 - CSS Grid</title>
     </head>
-    <body>
-        <main class="main">
-          
-        </main>
+    <!-- grid container -->
+    <body class="grid">
+      <!-- header with logo -->
+      <header class="grid__header">
+        <a href="#">
+          <img class="grid__header__logo" src="./assets/logo_website.png" alt="take care honey logo">
+        </a>
+      </header>
+      <!-- nav with ul/links -->
+      <nav class="grid__nav">
+        <ul class="grid__nav__ul">
+          <li class="grid__nav__ul__li"><a class="grid__nav__ul__li__a" href="#">home</a></li>
+          <li class="grid__nav__ul__li"><a class="grid__nav__ul__li__a" href="#">recipes</a></li>
+          <li class="grid__nav__ul__li"><a class="grid__nav__ul__li__a" href="#">about</a></li>
+          <li class="grid__nav__ul__li"><a class="grid__nav__ul__li__a" href="#">contact</a></li>
+          <li class="grid__nav__ul__li"><a class="grid__nav__ul__li__a" href="#">our favs</a></li>
+        </ul>
+      </nav>
+      <!-- main blog content -->
+      <main class="grid__main">
+        <h1 class="grid__main__h1">Homemade Arugula Pesto Ravioli</h1>
+        <h2 class="grid__main__h2">MARCH 07, 2018</h2>
+        <img class="grid__main__img" src="./assets/ravioli-13.jpg" alt="stamping out ravioi">
+        <p class="grid__main__p">We have an abundance of arugula in our garden. We don’t have much else
+          in there right now in these cold winter months but our arugula pushes on,
+          always persevering and refusing to stop growing. When it gets hard to manage,
+          I make pesto. We go outside and pick as much of it as we can, knowing the food
+          processor can handle it. Feeling inspired to make arugula pesto led to feeling
+          inspired to make homemade ravioli. Here was our process (with a 15 month old):
+        <p>
+        <p class="grid__main__p">First step, head outside to harvest some arugula. Put some in the colander, have
+          your 15 month old throw it back in the garden, repeat. I’m pretty sure she’s thinking
+          “the arugula belongs in the garden mama.” My little nature-loving girl…
+        </p>
+        <p class="grid__main__more"><a class="grid__main__more__a" href="#">read more > ></a></p>
+      </main>
+      <!-- welcome/about sidebar -->
+      <aside class="grid__aside">
+        <h1 class="grid__aside__h1">Welcome!</h1>
+        <p class="grid__aside__p">This food blog is one for the romantics. It’s for a glimpse into our lives
+          with our sweet little babes. It’s for us to remember how beautifully inspiring
+          life can be. Surely we’ll look back and be thankful we did this as a way to keep track
+          and always remember.</p>
+        <p class="grid__aside__more"><a class="grid__aside__more__a" href="#">read more > ></a></p>
+        <img class="grid__aside__img" src="./assets/BELFORDFAM.jpg" alt="the Belford family">
+      </aside>
+      <!-- footer with copyright -->
+      <footer class="grid__footer">
+        <p>all content &copy; 2020 take care honey</p>
+      </footer>
     </body>
 </html>
