@@ -12,12 +12,16 @@ html {
   margin: 0;
 }
 
-.main {
-    padding: 2rem 4rem;
+.header {
+  padding: 5rem 0 6rem;
 }
 
 .pizza-h1 {
-  line-height: 20%;
+  line-height: 10%;
+}
+
+.pizza-h2 {
+  padding-bottom: 1.25rem;
 }
 
 .nav {
@@ -30,6 +34,10 @@ html {
   padding: 0;
   display: flex;
   justify-content: space-around;
+}
+
+.main {
+    padding: 2rem 4rem;
 }
 
 .bianco {
