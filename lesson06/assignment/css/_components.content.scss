@@ -8,10 +8,6 @@ html {
     box-sizing: inherit;
 }
 
-.body {
-  margin: 0;
-}
-
 .header {
   padding: 5rem 0 6rem;
 }
@@ -31,7 +27,7 @@ html {
 
 .ul {
   margin: auto;
-  padding: 0;
+  padding: 2rem 0;
   display: flex;
   justify-content: space-around;
 }
@@ -47,4 +43,5 @@ html {
 .pizza-img {
   width: 25rem;
   padding-bottom: 1.5rem;
+  cursor: pointer;
 }

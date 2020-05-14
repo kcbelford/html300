@@ -41,15 +41,20 @@
     <main class="main">
       <h1 class="text-center font-weight-light text-uppercase">Some of the best pizza in America</h1>
       <h2 class="text-center pb-5 font-weight-lighter h6">In no particular order (with a few of my favs included)</h2>
+      <!-- container for accordion elements -->
       <div class="accordion" id="pizzaAccordion">
+        <!-- card container -->
         <div class="card">
+          <!-- header container -->
           <div class="card-header" id="headingOne">
             <h2 class="mb-0">
+              <!-- button with header - once clicked more info displays via accordion feature -->
               <button class="btn btn-link collapsed text-danger" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 <h2 class="text-dark font-weight-normal">1. Frank Pepe Pizzeria Napoletana</h2>
               </button>
             </h2>
           </div>
+          <!-- info that is displayed once button clicked -->
           <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#pizzaAccordion">
             <div class="card-body">
               <p class="lead">Casual local pizzeria chain serving a menu of coal-fired pies, beer & wine since 1925.</p>
