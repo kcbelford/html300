@@ -37,7 +37,7 @@ export default {
 }
 
 .ul {
-  /* margin: auto; */
+  margin: auto;
   padding: 2rem 0;
 }
 </style>
