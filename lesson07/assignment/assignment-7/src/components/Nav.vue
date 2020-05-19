@@ -6,18 +6,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav bg-light container-fluid ul text-uppercase text-center d-flex justify-content-around">
-            <li class="nav-item active">
-              <a class="nav-link"><router-link to="/">Home</router-link></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"><router-link to="/history">History</router-link></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"><router-link to="/styles">Styles</router-link></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"><router-link to="/pizzerias">Pizzerias</router-link></a>
-            </li>
+            <router-link v-for="link in links" :key="link.id" :to="link.page" class="nav-link">
+              {{link.text}}
+            </router-link>
           </ul>
         </div>
       </nav>
@@ -26,8 +17,37 @@
 
 <script>
 export default {
-  name: 'Nav'
+  name: 'Nav',
+
+  data () {
+    return {
+      links: [
+        {
+          id: 0,
+          text: 'Home',
+          page:'/'
+        },
+        {
+          id: 1,
+          text: 'History',
+          page: '/history'
+        },
+        {
+          id: 2,
+          text: 'Styles',
+          page: '/styles'
+        },
+        {
+          id: 3,
+          text: 'Pizzerias',
+          page: '/pizzerias'
+        }
+      ]
+    }
+  }
 }
+
+
 </script>
 
 <style lang="css" scoped>

@@ -7,264 +7,24 @@
       <h2 class="text-center pb-5 font-weight-lighter h6">In no particular order (with a few of my favs included)</h2>
       <!-- container for accordion elements -->
       <div class="accordion" id="pizzaAccordion">
-        <!-- card container -->
-        <div class="card">
-          <!-- header container -->
-          <div class="card-header" id="headingOne">
+
+        <div v-for="pizzeria in pizzerias" :key="pizzeria.key" class="card">
+          <div class="card-header" :id="pizzeria.headingId">
             <h2 class="mb-0">
-              <!-- button with header - once clicked more info displays via accordion feature -->
-              <button class="btn btn-link collapsed text-danger" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <h2 class="text-dark font-weight-normal">1. Frank Pepe Pizzeria Napoletana</h2>
+              <button class="btn btn-link collapsed text-danger" type="button" data-toggle="collapse" :data-target="pizzeria.dataTarget" aria-expanded="true" :aria-controls="pizzeria.collapseId">
+                <h2 class="text-dark font-weight-normal">{{pizzeria.name}}</h2>
               </button>
             </h2>
           </div>
-          <!-- info that is displayed once button clicked -->
-          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#pizzaAccordion">
+          <div :id="pizzeria.collapseId" class="collapse" :aria-labelledby="pizzeria.headingId" data-parent="#pizzaAccordion">
             <div class="card-body">
-              <p class="lead">Casual local pizzeria chain serving a menu of coal-fired pies, beer & wine since 1925.</p>
-              <p class="lead">Address: 157 Wooster St, New Haven, CT 06511</p>
-              <p class="lead">Website: <a href="http://www.pepespizzeria.com" target="_blank">pepespizzeria.com</a></p>
+              <p class="lead">{{pizzeria.bio}}</p>
+              <p class="lead">{{pizzeria.address}}</p>
+              <p class="lead">Website: <a :href="pizzeria.url" target="_blank">{{pizzeria.website}}</a></p>
             </div>
           </div>
         </div>
 
-        <div class="card">
-          <div class="card-header" id="headingTwo">
-            <h2 class="mb-0">
-              <button class="btn btn-link collapsed text-danger" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <h2 class="text-dark font-weight-normal">2. Lucali</h2>
-              </button>
-            </h2>
-          </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#pizzaAccordion">
-            <div class="card-body">
-              <p class="lead">Popular neighborhood eatery serves thin-crust pizza & guests bring their own wine & beer; cash only.</p>
-              <p class="lead">Address: 575 Henry St, Brooklyn, NY 11231</p>
-              <p class="lead">Website: <a href="https://www.lucalibrooklyn.com/" target="_blank">lucalibrooklyn.com</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingThree">
-            <h2 class="mb-0">
-              <button class="btn btn-link collapsed text-danger" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                <h2 class="text-dark font-weight-normal">3. Lombardi's</h2>
-              </button>
-            </h2>
-          </div>
-          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#pizzaAccordion">
-            <div class="card-body">
-              <p class="lead">Landmark NoLita restaurant serving coal-fired, thin-crust Neapolitan pizza since 1905.</p>
-              <p class="lead">Address: 32 Spring St, New York, NY 10012</p>
-              <p class="lead">Website: <a href="https://www.firstpizza.com/" target="_blank">firstpizza.com</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingFour">
-            <h2 class="mb-0">
-              <button class="btn btn-link collapsed text-danger" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                <h2 class="text-dark font-weight-normal">4. Totonno's</h2>
-              </button>
-            </h2>
-          </div>
-          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#pizzaAccordion">
-            <div class="card-body">
-              <p class="lead">Beloved old-school joint furnishing thin-crust coal-oven pizza to Coney Island crowds since 1924.</p>
-              <p class="lead">Address: 1524 Neptune Ave, Brooklyn, NY 11224</p>
-              <p class="lead">Website: <a href="https://www.totonnosconeyisland.com/" target="_blank">totonnosconeyisland.com</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingFive">
-            <h2 class="mb-0">
-              <button class="btn btn-link collapsed text-danger" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                <h2 class="text-dark font-weight-normal">5. Sally's Apizza</h2>
-              </button>
-            </h2>
-          </div>
-          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#pizzaAccordion">
-            <div class="card-body">
-              <p class="lead">Iconic pizzeria known for its coal-fired, thin-crust pies, long lines & basic, no-frills digs.</p>
-              <p class="lead">Address: 237 Wooster St, New Haven, CT 06511</p>
-              <p class="lead">Website: <a href="http://sallysapizza.com/" target="_blank">sallysapizza.com</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingSix">
-            <h2 class="mb-0">
-              <button class="btn btn-link collapsed text-danger" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                <h2 class="text-dark font-weight-normal">6. Patsy's Pizzeria</h2>
-              </button>
-            </h2>
-          </div>
-          <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#pizzaAccordion">
-            <div class="card-body">
-              <p class="lead">This historic parlor offers coal-fired pizzas & other Italian mains in a comfortable setting.</p>
-              <p class="lead">Address: 2287 1st Avenue, New York, NY 10035</p>
-              <p class="lead">Website: <a href="https://www.thepatsyspizza.com/" target="_blank">thepatsyspizza.com</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingSeven">
-            <h2 class="mb-0">
-              <button class="btn btn-link collapsed text-danger" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                <h2 class="text-dark font-weight-normal">7. John's of Bleecker Street</h2>
-              </button>
-            </h2>
-          </div>
-          <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#pizzaAccordion">
-            <div class="card-body">
-              <p class="lead">Brick-oven pies (no slices) with crisp thin crusts are the signature of this circa-1929 pizzeria.</p>
-              <p class="lead">Address: 278 Bleecker St, New York, NY 10014</p>
-              <p class="lead">Website: <a href="http://www.johnsbrickovenpizza.com/" target="_blank">johnsbrickovenpizza.com</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingEight">
-            <h2 class="mb-0">
-              <button class="btn btn-link collapsed text-danger" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                <h2 class="text-dark font-weight-normal">8. Joe's Pizza</h2>
-              </button>
-            </h2>
-          </div>
-          <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#pizzaAccordion">
-            <div class="card-body">
-              <p class="lead">West Village locals have depended on this counter-service pizzeria for quick slices since 1975.</p>
-              <p class="lead">Address: 7 Carmine St, New York, NY 10014</p>
-              <p class="lead">Website: <a href="http://www.joespizzanyc.com/" target="_blank">joespizzanyc.com</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingNine">
-            <h2 class="mb-0">
-              <button class="btn btn-link collapsed text-danger" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                <h2 class="text-dark font-weight-normal">9. Una Pizza Napoletana</h2>
-              </button>
-            </h2>
-          </div>
-          <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#pizzaAccordion">
-            <div class="card-body">
-              <p class="lead">Modern space offering self-taught pizzaiolo Anthony Mangieri's 12-inch, wood-fired Neapolitan pies.</p>
-              <p class="lead">Address: 175 Orchard St, New York, NY 10002</p>
-              <p class="lead">Website: <a href="http://www.unapizza.com/" target="_blank">unapizza.com</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingTen">
-            <h2 class="mb-0">
-              <button class="btn btn-link collapsed text-danger" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                <h2 class="text-dark font-weight-normal">10. Di Fara</h2>
-              </button>
-            </h2>
-          </div>
-          <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#pizzaAccordion">
-            <div class="card-body">
-              <p class="lead">Pizza fans trek to this no-frills Midwood storefront & queue up to partake of its storied slices.</p>
-              <p class="lead">Address: 1424 Avenue J, Brooklyn, NY 11230</p>
-              <p class="lead">Website: <a href="https://www.difarapizzany.com/" target="_blank">difarapizzany.com</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingEleven">
-            <h2 class="mb-0">
-              <button class="btn btn-link collapsed text-danger" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-                <h2 class="text-dark font-weight-normal">11. Pizzeria Bianco</h2>
-              </button>
-            </h2>
-          </div>
-          <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#pizzaAccordion">
-            <div class="card-body">
-              <p class="lead">Cozy, brick-walled restaurant serving wood-fired Neapolitan pizzas & Italian small plates.</p>
-              <p class="lead">Address: 623 E Adams St, Phoenix, AZ 85004</p>
-              <p class="lead">Website: <a href="http://www.pizzeriabianco.com/" target="_blank">pizzeriabianco.com</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingTwelve">
-            <h2 class="mb-0">
-              <button class="btn btn-link collapsed text-danger" type="button" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
-                <h2 class="text-dark font-weight-normal">12. Scarr's Pizza</h2>
-              </button>
-            </h2>
-          </div>
-          <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#pizzaAccordion">
-            <div class="card-body">
-              <p class="lead">Pizzeria with retro looks serving pies, slices & subs made with modern ingredients.</p>
-              <p class="lead">Address: 22 Orchard St, New York, NY 10002</p>
-              <p class="lead">Website: <a href="http://www.scarrspizza.com/" target="_blank">scarrspizza.com</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingThirteen">
-            <h2 class="mb-0">
-              <button class="btn btn-link collapsed text-danger" type="button" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
-                <h2 class="text-dark font-weight-normal">13. Delancey</h2>
-              </button>
-            </h2>
-          </div>
-          <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#pizzaAccordion">
-            <div class="card-body">
-              <p class="lead">Intimate & trendy restaurant known for its wood-fired pizzas decorated with seasonal toppings.</p>
-              <p class="lead">Address: 1415 NW 70th St, Seattle, WA 98117</p>
-              <p class="lead">Website: <a href="https://delanceyseattle.com/" target="_blank">delanceyseattle.com</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingFourteen">
-            <h2 class="mb-0">
-              <button class="btn btn-link collapsed text-danger" type="button" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
-                <h2 class="text-dark font-weight-normal">14. Pizzeria Mozza</h2>
-              </button>
-            </h2>
-          </div>
-          <div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#pizzaAccordion">
-            <div class="card-body">
-              <p class="lead">Chef Nancy Silverton turns out acclaimed wood-burning-oven pizzas & antipasti in busy digs.</p>
-              <p class="lead">Address: 641 N Highland Ave, Los Angeles, CA 90036</p>
-              <p class="lead">Website: <a href="https://pizzeriamozza.com/" target="_blank">pizzeriamozza.com</a></p>
-            </div>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header" id="headingFifteen">
-            <h2 class="mb-0">
-              <button class="btn btn-link collapsed text-danger" type="button" data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
-                <h2 class="text-dark font-weight-normal">15. Paulie Gee's</h2>
-              </button>
-            </h2>
-          </div>
-          <div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" data-parent="#pizzaAccordion">
-            <div class="card-body">
-              <p class="lead">Gourmet pizzeria where the wood-fired pies are topped with unusual, locally sourced ingredients.</p>
-              <p class="lead">Address: 60 Greenpoint Ave, Brooklyn, NY 11222</p>
-              <p class="lead">Website: <a href="https://pauliegee.com/greenpoint/" target="_blank">pauliegee.com/greenpoint</a></p>
-            </div>
-          </div>
-        </div>
       </div>
     </main>
     <Footer/>
@@ -283,6 +43,178 @@ export default {
     Nav,
     Header,
     Footer
+  },
+
+  data () {
+    return {
+      pizzerias: [
+        {
+          key: 0,
+          name: '1. Frank Pepe Pizzeria Napoletana',
+          bio: 'Casual local pizzeria chain serving a menu of coal-fired pies, beer & wine since 1925.',
+          address: 'Address: 157 Wooster St, New Haven, CT 06511',
+          url: 'http://www.pepespizzeria.com',
+          website: 'pepespizzeria.com',
+          headingId: 'headingOne',
+          collapseId: 'collapseOne',
+          dataTarget: '#collapseOne'
+        },
+        {
+          key: 1,
+          name: '2. Lucali',
+          bio: 'Popular neighborhood eatery serves thin-crust pizza & guests bring their own wine & beer; cash only.',
+          address: 'Address: 575 Henry St, Brooklyn, NY 11231',
+          url: 'https://www.lucalibrooklyn.com/',
+          website: 'lucalibrooklyn.com',
+          headingId: 'headingTwo',
+          collapseId: 'collapseTwo',
+          dataTarget: '#collapseTwo'
+        },
+        {
+          key: 2,
+          name: "3. Lombardi's",
+          bio: 'Landmark NoLita restaurant serving coal-fired, thin-crust Neapolitan pizza since 1905.',
+          address: 'Address: 32 Spring St, New York, NY 10012',
+          url: 'https://www.firstpizza.com/',
+          website: 'firstpizza.com',
+          headingId: 'headingThree',
+          collapseId: 'collapseThree',
+          dataTarget: '#collapseThree'
+        },
+        {
+          key: 3,
+          name: "4. Totonno's",
+          bio: 'Beloved old-school joint furnishing thin-crust coal-oven pizza to Coney Island crowds since 1924.',
+          address: 'Address: 1524 Neptune Ave, Brooklyn, NY 11224',
+          url: 'https://www.totonnosconeyisland.com/',
+          website: 'totonnosconeyisland.com',
+          headingId: 'headingFour',
+          collapseId: 'collapseFour',
+          dataTarget: '#collapseFour'
+        },
+        {
+          key: 4,
+          name: "5. Sally's Apizza",
+          bio: 'Iconic pizzeria known for its coal-fired, thin-crust pies, long lines & basic, no-frills digs.',
+          address: 'Address: 237 Wooster St, New Haven, CT 06511',
+          url: 'http://sallysapizza.com/',
+          website: 'sallysapizza.com',
+          headingId: 'headingFive',
+          collapseId: 'collapseFive',
+          dataTarget: '#collapseFive'
+        },
+        {
+          key: 5,
+          name: "6. Patsy's Pizzeria",
+          bio: 'This historic parlor offers coal-fired pizzas & other Italian mains in a comfortable setting.',
+          address: 'Address: 2287 1st Avenue, New York, NY 10035',
+          url: 'https://www.thepatsyspizza.com/',
+          website: 'thepatsyspizza.com',
+          headingId: 'headingSix',
+          collapseId: 'collapseSix',
+          dataTarget: '#collapseSix'
+        },
+        {
+          key: 6,
+          name: "7. John's of Bleecker Street",
+          bio: 'Brick-oven pies (no slices) with crisp thin crusts are the signature of this circa-1929 pizzeria.',
+          address: 'Address: 278 Bleecker St, New York, NY 10014',
+          url: 'http://www.johnsbrickovenpizza.com/',
+          website: 'johnsbrickovenpizza.com',
+          headingId: 'headingSeven',
+          collapseId: 'collapseSeven',
+          dataTarget: '#collapseSeven'
+        },
+        {
+          key: 7,
+          name: "8. Joe's Pizza",
+          bio: 'West Village locals have depended on this counter-service pizzeria for quick slices since 1975.',
+          address: 'Address: 7 Carmine St, New York, NY 10014',
+          url: 'http://www.joespizzanyc.com/',
+          website: 'joespizzanyc.com',
+          headingId: 'headingEight',
+          collapseId: 'collapseEight',
+          dataTarget: '#collapseEight'
+        },
+        {
+          key: 8,
+          name: "9. Una Pizza Napoletana",
+          bio: "Modern space offering self-taught pizzaiolo Anthony Mangieri's 12-inch, wood-fired Neapolitan pies.",
+          address: 'Address: 175 Orchard St, New York, NY 10002',
+          url: 'http://www.unapizza.com/',
+          website: 'unapizza.com',
+          headingId: 'headingNine',
+          collapseId: 'collapseNine',
+          dataTarget: '#collapseNine'
+        },
+        {
+          key: 9,
+          name: "10. Di Fara",
+          bio: "Pizza fans trek to this no-frills Midwood storefront & queue up to partake of its storied slices.",
+          address: 'Address: 1424 Avenue J, Brooklyn, NY 11230',
+          url: 'https://www.difarapizzany.com/',
+          website: 'difarapizzany.com',
+          headingId: 'headingTen',
+          collapseId: 'collapseTen',
+          dataTarget: '#collapseTen'
+        },
+        {
+          key: 10,
+          name: "11. Pizzeria Bianco",
+          bio: "Cozy, brick-walled restaurant serving wood-fired Neapolitan pizzas & Italian small plates.",
+          address: 'Address: 623 E Adams St, Phoenix, AZ 85004',
+          url: 'http://www.pizzeriabianco.com/',
+          website: 'pizzeriabianco.com',
+          headingId: 'headingEleven',
+          collapseId: 'collapseEleven',
+          dataTarget: '#collapseEleven'
+        },
+        {
+          key: 11,
+          name: "12. Scarr's Pizza",
+          bio: "Pizzeria with retro looks serving pies, slices & subs made with modern ingredients.",
+          address: 'Address: 22 Orchard St, New York, NY 10002',
+          url: 'http://www.scarrspizza.com/',
+          website: 'scarrspizza.com',
+          headingId: 'headingTwelve',
+          collapseId: 'collapseTwelve',
+          dataTarget: '#collapseTwelve'
+        },
+        {
+          key: 12,
+          name: "13. Delancey",
+          bio: "Intimate & trendy restaurant known for its wood-fired pizzas decorated with seasonal toppings.",
+          address: 'Address: 1415 NW 70th St, Seattle, WA 98117',
+          url: 'https://delanceyseattle.com/',
+          website: 'delanceyseattle.com',
+          headingId: 'headingThirteen',
+          collapseId: 'collapseThirteen',
+          dataTarget: '#collapseThirteen'
+        },
+        {
+          key: 13,
+          name: "14. Pizzeria Mozza",
+          bio: "Chef Nancy Silverton turns out acclaimed wood-burning-oven pizzas & antipasti in busy digs.",
+          address: 'Address: 641 N Highland Ave, Los Angeles, CA 90036',
+          url: 'https://pizzeriamozza.com/',
+          website: 'pizzeriamozza.com',
+          headingId: 'headingFourteen',
+          collapseId: 'collapseFourteen',
+          dataTarget: '#collapseFourteen'
+        },
+        {
+          key: 14,
+          name: "15. Paulie Gee's",
+          bio: "Gourmet pizzeria where the wood-fired pies are topped with unusual, locally sourced ingredients.",
+          address: 'Address: 60 Greenpoint Ave, Brooklyn, NY 11222',
+          url: 'https://pauliegee.com/greenpoint/',
+          website: 'pauliegee.com/greenpoint',
+          headingId: 'headingFifteen',
+          collapseId: 'collapseFifteen',
+          dataTarget: '#collapseFifteen'
+        }
+      ]
+    }
   }
 }
 </script>
