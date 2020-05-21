@@ -7,7 +7,7 @@
       <h2 class="text-center pb-5 font-weight-lighter h6">In no particular order (with a few of my favs included)</h2>
       <!-- container for accordion elements -->
       <div class="accordion" id="pizzaAccordion">
-
+        <!-- v-for populates list of pizzerias in accordian -->
         <div v-for="pizzeria in pizzerias" :key="pizzeria.key" class="card">
           <div class="card-header" :id="pizzeria.headingId">
             <h2 class="mb-0">

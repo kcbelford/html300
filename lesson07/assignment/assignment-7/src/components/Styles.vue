@@ -8,6 +8,7 @@
       <!-- bootstrap grid displays three images across on lg and up screens, two across on md and above screens and one across on xs and above screens -->
       <div class="container-fluid">
         <div class="row">
+          <!-- v-for populates data from first object -->
           <div v-for="pizza in pizzaRowOne" :key="pizza.id" class="col-lg-3 col-md-6 col-xs-12">
             <h2 class="font-weight-lighter">{{ pizza.style }}</h2>
             <a data-toggle="popover" data-trigger="focus" data-placement="bottom" v-bind:data-content="pizza.dataContent">
@@ -16,6 +17,7 @@
           </div>
         </div>
         <div class="row">
+          <!-- v-for populates data from second object -->
           <div v-for="pizza in pizzaRowTwo" :key="pizza.id" class="col-lg-3 col-md-6 col-xs-12">
             <h2 class="font-weight-lighter">{{ pizza.style }}</h2>
             <a data-toggle="popover" data-trigger="focus" data-placement="bottom" v-bind:data-content="pizza.dataContent">
