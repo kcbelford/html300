@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="styles">
     <main class="main">
+      <!-- filter applied to h1 turns text to all uppercase -->
       <h1 class="text-center font-weight-light">{{ stylesHeading | uppercase }}</h1>
       <h2 class="text-center pb-5 font-weight-lighter h6">Click on each picture for more info</h2>
       <!-- bootstrap grid displays three images across on lg and up screens, two across on md and above screens and one across on xs and above screens -->
@@ -10,6 +11,7 @@
           <div v-for="pizza in pizzaRowOne" :key="pizza.id" class="col-lg-3 col-md-6 col-xs-12">
             <h2 class="font-weight-lighter">{{ pizza.style }}</h2>
             <a data-toggle="popover" data-trigger="focus" data-placement="bottom" v-bind:data-content="pizza.dataContent">
+            <!-- mixin triggered by click event / toggles 'outline' class -->
             <img @click="myMixin" :class="{outline}" class="img-fluid pizza-img" :src="pizza.image" :alt="pizza.alt">
             </a>
           </div>

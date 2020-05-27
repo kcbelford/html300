@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="header">
     <router-link to="/" class="text-decoration-none">
+    <!-- slot connected to app.vue page -->
     <slot name="pizza"></slot>
     </router-link>
     <!-- <router-link to="/" class="text-decoration-none">

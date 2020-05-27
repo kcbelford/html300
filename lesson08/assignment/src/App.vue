@@ -5,6 +5,7 @@
       <p slot="pizza">slot paragraph</p>
     </my-slot> -->
     <!-- <Header/> -->
+    <!-- slot will display these three headers -->
     <my-slot>
       <h1 slot="pizza" class="text-center display-2 text-danger text-uppercase pizza-h1">Pizza</h1>
       <h2 slot="pizza" class="text-center display-4 text-dark pizza-h2">piz·za</h2>
