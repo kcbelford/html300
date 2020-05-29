@@ -4,11 +4,6 @@
     <!-- slot connected to app.vue page -->
     <slot name="pizza"></slot>
     </router-link>
-    <!-- <router-link to="/" class="text-decoration-none">
-    <h1 class="text-center display-2 text-danger text-uppercase pizza-h1">Pizza</h1>
-    <h2 class="text-center display-4 text-dark pizza-h2">piz·za</h2>
-    <h3 class="text-center display-5 text-secondary">/ˈpētsə/</h3>
-    </router-link> -->
   </div>
 </template>
 
