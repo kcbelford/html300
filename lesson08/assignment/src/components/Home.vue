@@ -4,8 +4,7 @@
       <h1 class="text-center pb-5 font-weight-light text-uppercase">Welcome to my homage to pizza!</h1>
       <img class="img-fluid bianco mx-auto d-block rounded" src="../assets/bianco-1.jpg" alt="a man holding a baby standing in front of Pizzeria Bianco">
       <p class="lead pt-4">
-        My name is Kevin and I am a big fan of pizza (making and eating). The photo above is of myself and my daughter standing in front of arguably the best pizza restaurant in the United States, Pizzeria Bianco.
-        On this site you will find a brief history of pizza, imagery of different styles of pizza, and a list of some of the best pizzerias in the United States. Enjoy!
+        {{ introPara }}
       </p>
       <div class="text-center pt-4">
         <p class="h6">Is pizza your favorite food, too?</p>
@@ -33,9 +32,13 @@
 export default {
   name: 'Home',
 
-// sets the starting value to true
+
   data() {
     return {
+
+      introPara: "My name is Kevin and I am a big fan of pizza (making and eating). The photo above is of myself and my daughter standing in front of arguably the best pizza restaurant in the United States, Pizzeria Bianco. On this site you will find a brief history of pizza, imagery of different styles of pizza, and a list of some of the best pizzerias in the United States. Enjoy!",
+
+// sets the starting value to true
       favorite: true
     }
   },
