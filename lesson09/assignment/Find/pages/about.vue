@@ -2,8 +2,10 @@
   <div class="">
     <find-header/>
     <find-nav/>
-    <h1>About FMB</h1>
-    <p>{{ aboutContent }}</p>
+    <div class="about-container">
+      <h1 class="font-weight-light">About Find My Brewery</h1>
+      <p class="lead">{{ aboutContent }}</p>
+    </div>
     <find-footer/>
   </div>
 </template>
@@ -22,11 +24,24 @@ export default {
 
   data () {
     return {
-      aboutContent: 'this is the about content.'
+      aboutContent: "Every craft beer enthusiast deserves to have a brewery they can call their own.  That special spot, in their favorite city, where the bartender knows their name and what they're drinking.  Find My Brewery was created to aid in the discovery of such a place.  Users can simply search for a brewery, city or keyword to pull up a list of breweries and relevant info."
     }
   }
 }
 </script>
 
 <style lang="css" scoped>
+.about-container {
+  text-align: center;
+}
+
+h1 {
+  padding: 6rem 0 4rem;;
+  color: #525B5E;
+}
+
+p {
+  padding: 0 4rem;
+  text-align: left;
+}
 </style>

@@ -68,7 +68,7 @@ export default {
 
 <style lang="css" scoped>
 .search-container {
-  /* background-color: #fefbea; */
+  /* background-color: #fffbee; */
 }
 
 h1 {

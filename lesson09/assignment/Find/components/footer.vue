@@ -12,9 +12,7 @@ export default {
 <style lang="css" scoped>
 .footer {
   background-color: #24352B;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   padding: 4rem 0;
   margin-top: 4rem;
 }

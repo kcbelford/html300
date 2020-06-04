@@ -10,7 +10,7 @@
             <nuxt-link to="/" class="mylink">FMB</nuxt-link>
             <nuxt-link to="/about" class="mylink">About FMB</nuxt-link>
             <nuxt-link to="/craft" class="mylink">What is Craft Beer?</nuxt-link>
-            <nuxt-link to="/favorites" class="mylink">Our Favorites</nuxt-link>
+            <nuxt-link to="/favorites" class="mylink">My Favorites</nuxt-link>
           </ul>
         </div>
       </nav>

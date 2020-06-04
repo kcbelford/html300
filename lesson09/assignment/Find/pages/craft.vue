@@ -2,8 +2,10 @@
   <div class="">
     <find-header/>
     <find-nav/>
-    <h1>What is Craft Beer?</h1>
-    <p>{{ craftBeer }}</p>
+    <div class="craft-container">
+      <h1 class="font-weight-light">What is Craft Beer Anyway?</h1>
+      <p class="lead">{{ craftBeer }}</p>
+    </div>
     <find-footer/>
   </div>
 </template>
@@ -22,11 +24,24 @@ export default {
 
   data () {
     return {
-      craftBeer: 'this is all about craft beer.'
+      craftBeer: 'A craft brewery or microbrewery is a brewery that produces small amounts of beer, typically much smaller than large-scale corporate breweries, and is independently owned. Such breweries are generally characterized by their emphasis on quality, flavor, and brewing technique.'
     }
   }
 }
 </script>
 
 <style lang="css" scoped>
+.craft-container {
+  text-align: center;
+}
+
+h1 {
+  padding: 6rem 0 4rem;
+  color: #525B5E;
+}
+
+p {
+  padding: 0 4rem;
+  text-align: left;
+}
 </style>
