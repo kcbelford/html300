@@ -94,7 +94,7 @@ h1 {
 }
 
 .btn {
-  background-color: #607E85;
+  background-color: #697649;
   color: white;
   margin-left: 2rem;
 }
@@ -107,7 +107,7 @@ h1 {
   color: #607E85;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 .brewery-tile {
@@ -119,7 +119,7 @@ h1 {
 
 .tile-size {
   width: 35rem;
-  padding: 6rem 0;
+  padding: 5rem 1rem;
   margin: 1rem;
   border: 1px solid #E5E5E5;
   border-radius: 6px;

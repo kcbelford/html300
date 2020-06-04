@@ -1,34 +1,40 @@
 <template>
   <div class="wrapper">
-    <h1 class="heading">Countries of Europe</h1>
-
-
+    <h1 class="heading">Breweries of America</h1>
+    <section class="container" v-if="breweries">
+        <card
+          v-for="brewery of breweries"
+          :key="brewery.id"
+          :brewery="brewery"
+        />
+    </section>
   </div>
 </template>
 
 <script>
-import axios from 'axios';
+import Card from '~/components/Card.vue'
+import axios from 'axios'
 
 export default {
   components: {
-
+    Card
   },
   data() {
     return {
       loading: true,
-      countries: null,
+      breweries: null,
       errored: false
     }
   },
   mounted () {
-    axios
-      .get('https://restcountries.eu/rest/v2/region/europe')
-      .then(response => (this.countries = response.data))
-      .catch(error => {
-        console.log(error)
-        this.errored = true
-      })
-      .finally(() => this.loading = false)
+  axios
+    .get('https://raw.githubusercontent.com/openbrewerydb/openbrewerydb/master/breweries.json')
+    .then(response => (this.breweries = response.data))
+    .catch(error => {
+      console.log(error)
+      this.errored = true
+    })
+    .finally(() => this.loading = false)
   }
 
 }
