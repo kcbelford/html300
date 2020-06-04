@@ -39,7 +39,7 @@ export default {
           website: '7seasbrewing.com',
           image: require('~/static/seven-seas.jpg'),
           alt: 'Interior of 7 Seas Brewery',
-          info: "This brewery is larger than I typically like, but the large open space is warm and inviting (and it's kid friendly - I have two).  The space is shared with a coffee shop and a sandwich shop, so you could really spend the whole day there if you wanted.  They have a large selection of beer on tap and to-go.  One of my favorites is their Life Jacket Citrus IPA.  It has a lower alcohol content so you shouldn’t have a problem drinking a couple."
+          info: "This brewery is larger than I typically like, but the large open space is warm and inviting (and it's kid friendly - I have two). The space is shared with a coffee shop and a sandwich shop, so you could really spend the whole day there if you wanted. They have a large selection of beer on tap and to-go. One of my favorites is their Life Jacket Citrus IPA. It has a lower alcohol content so you shouldn’t have a problem drinking a couple."
         },
         {
           id: 1,
@@ -49,7 +49,7 @@ export default {
           website: 'fremontbrewing.com',
           image: require('~/static/fremont-brewing.jpg'),
           alt: 'Exterior of Fremont Brewery',
-          info: 'brewery information here'
+          info: 'Located right off the Burke-Gilman Trail in Seattle, this brewery is the perfect finish line after a long bike ride. There is more outdoor seating than indoor, but who doesn’t like drinking beer in the rain?  Speaking of which, my favorite is the Interurban IPA.'
         },
         {
           id: 2,
@@ -59,7 +59,7 @@ export default {
           website: 'bbaybrewery.com',
           image: require('~/static/boundary-bay.jpg'),
           alt: 'Exterior of Boundary Bay Brewery',
-          info: 'brewery information here'
+          info: 'My love for this brewery is mostly based on nostalgia. I spent a lot of time here in college (reggae night anyone?). However, they do have great beer and equally as great food.  Try their lamb burger and Scotch Ale.'
         },
         {
           id: 3,
@@ -69,7 +69,7 @@ export default {
           website: 'ninkasibrewing.com',
           image: require('~/static/ninkasi.jpg'),
           alt: 'Exterior of Ninkasi Brewery',
-          info: 'brewery information here'
+          info: 'I haven’t actually been to this brewery, but I was born in Eugene so I feel a special connection to it.  I haven’t had a beer of theirs I don’t like. So my favorite is ALL OF THEM!'
         },
         {
           id: 4,
@@ -79,7 +79,7 @@ export default {
           website: 'pfriembeer.com',
           image: require('~/static/pfriem.jpg'),
           alt: 'Interior of Pfriem Brewery',
-          info: 'brewery information here'
+          info: 'Well I haven’t been here either, but my favorite beer of all time comes from pFriem.  You must try their IPA.'
         },
         {
           id: 5,
@@ -89,7 +89,7 @@ export default {
           website: 'stoupbrewing.com',
           image: require('~/static/stoup.jpg'),
           alt: 'Outside looking in at Stoup Brewery',
-          info: 'brewery information here'
+          info: 'The size and vibe of this place is what I’m typically drawn to. It is modest in size and tucked away in the residential neighborhood of Ballard in Seattle. Every day brings a different food truck parked outside so you can grab a little bite to accompany your beverage. Did I mention their head brewer is a chemist? Also, one of their owners was the first woman in Washington to become a certified cicerone (the equivalent of a beer sommelier)! Those facts, along with some fantastic beer, are more than enough reasons to check this brewery out.  One of my favorites is their Northwest Red Ale.'
         }
       ]
     }
