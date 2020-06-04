@@ -1,30 +1,34 @@
 <template lang="html">
-  <div class="">
-    <h1 v-if="!submitted">Welcome</h1>
-    <form class="" action="" method="post">
-      <!-- <label for=""></label>
-      <input v-model="userInput" type="text" name="search-brewery" placeholder="Brewery Name" value=""> -->
+  <div class="search-container">
+    <h1 v-if="!submitted" class="font-weight-light">Welcome To Find My Brewery!</h1>
+    <h1 v-if="submitted" class="font-weight-light">Here are your breweries!</h1>
+    <p v-if="!submitted" class="intro lead text-uppercase" >Enter a brewery name, city or keyword to find your brewery:</p>
+    <p v-if="submitted" class="intro lead text-uppercase" >Check 'em out below</p>
+    <form class="find-form form-inline" action="" method="post">
       <label for="brewery-search"></label>
-      <input v-model="userInput" type="text" name="brewery-search" placeholder="Brewery or City Name" value="">
-      <button @click.prevent="findBrewery" type="submit" name="find-brewery">Find My Brewery</button>
+      <input v-model="userInput" type="text" name="brewery-search" placeholder="Brewery / City / Keyword" value="" class="form-control">
+      <button @click.prevent="findBrewery" type="submit" name="find-brewery" class="btn">Find My Brewery</button>
     </form>
-    <div v-if="submitted" class="">
-      <h1>Here are your breweries</h1>
-       <div
-         v-for="brewery of breweries"
-         :key="brewery.id"
-         :brewery="brewery"
-         class=""
-         >
-         <h4>{{ brewery.name }}</h4>
-         <h5><a :href="brewery.website_url" target="_blank">{{ brewery.website_url }}</a></h5>
-         <h5>{{ brewery.brewery_type }}</h5>
-         <h5>{{ brewery.street }}</h5>
-         <h5>{{ brewery.city }}</h5>
-         <h5>{{ brewery.state }}</h5>
-         <h5>{{ brewery.postal_code}}</h5>
-       </div>
-    </div>
+      <div v-if="submitted">
+          <div class="brewery-tile">
+           <div
+             v-for="brewery of breweries"
+             :key="brewery.id"
+             :brewery="brewery"
+             class="tile-size">
+             <h4 class="brewery-name mb-4 font-weight-light">{{ brewery.name }}</h4>
+             <a :href="brewery.website_url" target="_blank" class="brewery-link lead">{{ brewery.website_url }}</a>
+             <p class="lead pt-4 brewery-p">{{ brewery.street }}</p>
+             <div class="d-flex justify-content-center">
+               <p class="lead brewery-p">{{ brewery.city }},</p>
+               <div class="space">
+               </div>
+               <p class="lead brewery-p">{{ brewery.state }}</p>
+             </div>
+             <p class="lead brewery-p">{{ brewery.postal_code}}</p>
+           </div>
+        </div>
+      </div>
   </div>
 </template>
 
@@ -59,23 +63,83 @@ export default {
         .finally(() => this.loading = false)
     }
   }
-
-  // mounted () {
-  // axios
-  //   .get('https://api.openbrewerydb.org/breweries/search?query=' + this.userInput)
-  //   .then(response => (this.breweries = response.data))
-  //   .catch(error => {
-  //     console.log(error)
-  //     this.errored = true
-  //   })
-  //   .finally(() => this.loading = false)
-  // }
 }
-
-// https://api.openbrewerydb.org/breweries?by_name=
-// https://api.openbrewerydb.org/breweries?by_city=
-// https://api.openbrewerydb.org/breweries?by_state=
 </script>
 
 <style lang="css" scoped>
+.search-container {
+  /* background-color: #fefbea; */
+}
+
+h1 {
+  text-align: center;
+  padding: 8rem 0 1rem;
+  color: #525B5E;
+}
+
+.breweries-header {
+  padding: 0 0 2rem;
+}
+
+.intro {
+  text-align: center;
+  color: #525B5E;
+}
+
+.find-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 6rem 0 7rem;
+}
+
+.btn {
+  background-color: #607E85;
+  color: white;
+  margin-left: 2rem;
+}
+
+.btn:hover {
+  background-color: #24352B;
+}
+
+.brewery-name {
+  color: #607E85;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+}
+
+.brewery-tile {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.tile-size {
+  width: 35rem;
+  padding: 6rem 0;
+  margin: 1rem;
+  border: 1px solid #E5E5E5;
+  border-radius: 6px;
+  /* background-color: #C5C9B2; */
+}
+
+.tile-size:hover {
+  background-color: #E5E5E5;
+}
+
+.brewery-link {
+  color: #697649;
+  font-size: 1.5rem;
+}
+
+.brewery-p {
+  font-size: 1.5rem;
+}
+
+.space {
+  padding-right: 0.5rem;
+}
 </style>

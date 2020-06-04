@@ -1,33 +1,32 @@
-<template>
-  <section class="">
+<template lang="html">
+  <div class="">
     <find-header/>
     <find-nav/>
-    <search/>
+    <h1>What is Craft Beer?</h1>
+    <p>{{ craftBeer }}</p>
     <find-footer/>
-  </section>
+  </div>
 </template>
 
 <script>
 import header from '~/components/header.vue'
 import nav from '~/components/nav.vue'
 import footer from '~/components/footer.vue'
-import search from '~/components/search.vue'
 
 export default {
   components: {
     'find-header': header,
     'find-nav': nav,
-    'find-footer': footer,
-    search
+    'find-footer': footer
+  },
+
+  data () {
+    return {
+      craftBeer: 'this is all about craft beer.'
+    }
   }
 }
 </script>
 
-<style>
-/* .container {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-} */
-
+<style lang="css" scoped>
 </style>
