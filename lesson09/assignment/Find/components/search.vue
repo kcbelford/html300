@@ -68,7 +68,7 @@ export default {
 
 <style lang="css" scoped>
 .search-container {
-  /* background-color: #fffbee; */
+  /* width: 100%; */
 }
 
 h1 {
@@ -123,6 +123,7 @@ h1 {
   margin: 1rem;
   border: 1px solid #E5E5E5;
   border-radius: 6px;
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.1);
   /* background-color: #C5C9B2; */
 }
 

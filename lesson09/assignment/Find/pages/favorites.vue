@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="">
+  <div class="container">
     <find-header/>
     <find-nav/>
     <div class="favorite-container">
@@ -98,6 +98,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.container {
+  /* width: 100%; */
+}
+
 .favorite-container {
   display: flex;
   justify-content: center;
@@ -142,5 +146,21 @@ img {
 
 .brewery-info {
   padding: 2rem 0;
+}
+
+/* mobile media query */
+@media screen and (max-width: 577px) {
+  img {
+    width: 15rem;
+  }
+
+  h1 {
+    /* font-size: 1rem; */
+  }
+}
+
+/* tablet media query */
+@media screen  and (max-width: 769px) {
+
 }
 </style>

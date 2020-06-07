@@ -1,5 +1,5 @@
 <template>
-  <section class="">
+  <section class="container">
     <find-header/>
     <find-nav/>
     <search/>
@@ -24,10 +24,5 @@ export default {
 </script>
 
 <style>
-/* .container {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-} */
 
 </style>

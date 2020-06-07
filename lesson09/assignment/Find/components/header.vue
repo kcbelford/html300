@@ -4,7 +4,7 @@
       <h1 class="title">Find My Brewery</h1>
       <div class="line-est">
         <div class="line"></div>
-        <h2>EST. 2020</h2>
+        <h2 class="est">EST. 2020</h2>
         <div class="line"></div>
       </div>
     </header>
@@ -20,7 +20,7 @@ export default {
   width: 6rem;
 }
 
-h1 {
+.title {
   font-size: 2rem;
   text-transform: uppercase;
   color: #697649;
@@ -28,7 +28,7 @@ h1 {
   letter-spacing: 3px;
 }
 
-h2 {
+.est {
   font-size: 1rem;
   letter-spacing: 3px;
   color: #697649;
@@ -53,5 +53,25 @@ h2 {
   align-items: center;
   justify-content: center;
   padding-top: 4rem;
+}
+
+/* mobile media query */
+@media screen and (max-width: 577px) {
+    .title {
+      font-size: 1.5rem;
+    }
+
+    .est {
+      display: none;
+    }
+
+    .line {
+      display: none;
+    }
+}
+
+/* tablet media query */
+@media screen  and (max-width: 769px) {
+
 }
 </style>

@@ -1,6 +1,5 @@
 <template lang="html">
-
-  <div id="nav">
+  <div id="nav" class="nav-container">
     <nav class="navbar navbar-expand-sm navbar-light d-flex justify-content-center nav">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -32,6 +31,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.nav-container {
+  width: 100%;
+}
+
 .ul {
   display: flex;
   justify-content: space-around;
