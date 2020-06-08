@@ -35,7 +35,7 @@ There are four main steps of hypothesis testing:
 	- Look for a statistically significant test where all data is either trending positive or all trending 	negative
 
 3. Analyze the data:
-	- “We’re doing business not science”, so sometimes it is okay to run a test that was not 	statistically significant based on how strong or weak the hypothesis is and how cheap or 	expensive it would be to make the change
+	- “We’re doing business not science”, so sometimes it is okay to run a test that was not statistically significant based on how strong or weak the hypothesis is and how cheap or 	expensive it would be to make the change
 
 4. Draw some conclusions:
 	- With hypothesis testing, trying to test the null hypothesis

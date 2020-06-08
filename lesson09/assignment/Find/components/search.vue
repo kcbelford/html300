@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="search-container">
-    <h1 v-if="!submitted" class="font-weight-light">Welcome To Find My Brewery!</h1>
+    <h1 v-if="!submitted" class="font-weight-light">{{ title }}</h1>
     <h1 v-if="submitted" class="font-weight-light">Here are your breweries!</h1>
     <p v-if="!submitted" class="intro lead text-uppercase" >Enter a brewery name, city or keyword to find your brewery:</p>
     <p v-if="submitted" class="intro lead text-uppercase" >Check 'em out below</p>
@@ -41,14 +41,24 @@ export default {
 	},
 
   data() {
-      return {
-        userInput: "",
-        submitted: false,
-        loading: true,
-        breweries: null,
-        errored: false
-      }
-    },
+    return {
+      userInput: "",
+      submitted: false,
+      loading: true,
+      breweries: null,
+      errored: false,
+      title: 'Welcome To Find My Brewery!'
+    }
+  },
+
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: 'Enter a brewery name, city or keyword to find your new favorite brewery.' }
+      ]
+    }
+  },
 
   methods: {
     findBrewery: function() {

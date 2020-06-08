@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="">
     <find-header/>
     <find-nav/>
     <search/>

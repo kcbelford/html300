@@ -3,7 +3,7 @@
     <find-header/>
     <find-nav/>
     <div class="about-container">
-      <h1 class="font-weight-light">About Find My Brewery</h1>
+      <h1 class="font-weight-light">{{ title }}</h1>
       <p class="lead">{{ aboutContent }}</p>
     </div>
     <find-footer/>
@@ -24,7 +24,17 @@ export default {
 
   data () {
     return {
-      aboutContent: "Every craft beer enthusiast deserves to have a brewery they can call their own.  That special spot, in their favorite city, where the bartender knows their name and what they're drinking.  Find My Brewery was created to aid in the discovery of such a place.  Users can simply search for a brewery, city or keyword to pull up a list of breweries and relevant info."
+      aboutContent: "Every craft beer enthusiast deserves to have a brewery they can call their own.  That special spot, in their favorite city, where the bartender knows their name and what they're drinking.  Find My Brewery was created to aid in the discovery of such a place.  Users can simply search for a brewery, city or keyword to pull up a list of breweries and relevant info.",
+      title: 'About Find My Brewery'
+    }
+  },
+
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: 'Find My Brewery was created to aid in the discovery of your new favorite brewery.' }
+      ]
     }
   }
 }

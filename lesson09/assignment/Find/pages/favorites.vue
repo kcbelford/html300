@@ -1,9 +1,9 @@
 <template lang="html">
-  <div class="container">
+  <div class="">
     <find-header/>
     <find-nav/>
     <div class="favorite-container">
-      <h1 class="font-weight-light">My Favorite Breweries & Beers</h1>
+      <h1 class="font-weight-light">{{ title }}</h1>
       <div v-for="favorite in myFavorites" :key="favorite.id" class="my-favs">
         <h2>{{ favorite.brewery }}</h2>
         <h3>{{ favorite.location }}</h3>
@@ -91,6 +91,16 @@ export default {
           alt: 'Outside looking in at Stoup Brewery',
           info: 'The size and vibe of this place is what I’m typically drawn to. It is modest in size and tucked away in the residential neighborhood of Ballard in Seattle. Every day brings a different food truck parked outside so you can grab a little bite to accompany your beverage. Did I mention their head brewer is a chemist? Also, one of their owners was the first woman in Washington to become a certified cicerone (the equivalent of a beer sommelier)! Those facts, along with some fantastic beer, are more than enough reasons to check this brewery out.  One of my favorites is their Northwest Red Ale.'
         }
+      ],
+      title: 'My Favorite Breweries & Beers'
+    }
+  },
+
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        { hid: 'description', name: 'description', content: 'A list of my favorite brewries and relevant information.' }
       ]
     }
   }
