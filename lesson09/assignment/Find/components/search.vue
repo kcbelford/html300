@@ -77,9 +77,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.search-container {
-  /* width: 100%; */
-}
 
 h1 {
   text-align: center;
@@ -107,6 +104,8 @@ h1 {
   background-color: #697649;
   color: white;
   margin-left: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .btn:hover {
@@ -152,5 +151,33 @@ h1 {
 
 .space {
   padding-right: 0.5rem;
+}
+
+/* mobile media query */
+@media screen and (max-width: 577px) {
+  .btn {
+    margin: 2rem 0 0;
+  }
+
+  .form-control {
+    width: 70%;
+  }
+
+  .brewery-name {
+    font-size: 2rem;
+  }
+
+  .brewery-link {
+    font-size: 1rem;
+  }
+
+  .brewery-p {
+    font-size: 1rem;
+  }
+}
+
+/* tablet media query */
+@media screen  and (max-width: 769px) {
+
 }
 </style>

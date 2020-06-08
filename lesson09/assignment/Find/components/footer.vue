@@ -13,7 +13,7 @@ export default {
 .footer {
   background-color: #24352B;
   text-align: center;
-  padding: 4rem 0;
+  padding: 6rem 0;
   margin-top: 4rem;
 }
 
@@ -23,6 +23,7 @@ export default {
   word-spacing: 2px;
   letter-spacing: 0.5px;
   margin: 0;
+  font-size: 1rem;
 }
 
 .api-link {
@@ -31,5 +32,18 @@ export default {
 
 .api-link:hover:visited {
   color: #AFB28D;
+}
+
+/* mobile media query */
+@media screen and (max-width: 577px) {
+    .footer-content {
+      font-size: 0.5rem;
+    }
+
+}
+
+/* tablet media query */
+@media screen  and (max-width: 769px) {
+
 }
 </style>

@@ -108,9 +108,6 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.container {
-  /* width: 100%; */
-}
 
 .favorite-container {
   display: flex;
@@ -161,11 +158,19 @@ img {
 /* mobile media query */
 @media screen and (max-width: 577px) {
   img {
-    width: 15rem;
+    width: 20rem;
   }
 
-  h1 {
-    /* font-size: 1rem; */
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  .my-favs {
+    width: 90%;
   }
 }
 

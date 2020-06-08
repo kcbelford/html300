@@ -61,13 +61,6 @@ export default {
       font-size: 1.5rem;
     }
 
-    .est {
-      display: none;
-    }
-
-    .line {
-      display: none;
-    }
 }
 
 /* tablet media query */
