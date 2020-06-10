@@ -54,4 +54,17 @@ p {
   padding: 0 4rem;
   text-align: left;
 }
+
+/* mobile media query */
+@media screen and (max-width: 577px) {
+  p {
+    padding: 0 1rem;
+  }
+
+}
+
+/* tablet media query */
+@media screen  and (max-width: 769px) {
+  
+}
 </style>
