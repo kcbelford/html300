@@ -159,6 +159,7 @@ h1 {
   padding-right: 0.5rem;
 }
 
+/* back to top button */
 .top-btn {
   margin: 0;
   padding: 0.5rem;
