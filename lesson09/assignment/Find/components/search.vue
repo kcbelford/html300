@@ -160,7 +160,7 @@ h1 {
 
 .top-btn {
   margin: 0;
-  padding: 0.5rem;;
+  padding: 0.5rem;
   position: fixed;
   bottom: 20px;
   right: 20px;
