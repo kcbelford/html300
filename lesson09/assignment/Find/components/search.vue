@@ -28,6 +28,7 @@
              <p class="lead brewery-p">{{ brewery.postal_code}}</p>
            </div>
         </div>
+        <!-- back to top button -->
         <button @click="toTop" class="btn top-btn">TOP</button>
       </div>
   </div>
