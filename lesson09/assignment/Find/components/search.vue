@@ -28,6 +28,7 @@
              <p class="lead brewery-p">{{ brewery.postal_code}}</p>
            </div>
         </div>
+        <button @click="toTop" type="button" name="button" class="btn top-btn">TOP</button>
       </div>
   </div>
 </template>
@@ -71,6 +72,10 @@ export default {
           this.errored = true
         })
         .finally(() => this.loading = false)
+    },
+    toTop: function() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
     }
   }
 }
@@ -151,6 +156,15 @@ h1 {
 
 .space {
   padding-right: 0.5rem;
+}
+
+.top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  margin: 0;
+  padding: 1rem;
 }
 
 /* mobile media query */
