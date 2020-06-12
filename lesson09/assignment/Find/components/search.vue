@@ -163,10 +163,10 @@ h1 {
 .top-btn {
   margin: 0;
   padding: 0.5rem;
-  position: fixed;
-  bottom: 20px;
+  position: absolute;
   right: 20px;
   z-index: 99;
+  letter-spacing: 2px;
 }
 
 /* mobile media query */
