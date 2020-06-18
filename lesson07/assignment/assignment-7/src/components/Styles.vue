@@ -11,7 +11,7 @@
           <!-- v-for populates data from first object -->
           <div v-for="pizza in pizzaRowOne" :key="pizza.id" class="col-lg-3 col-md-6 col-xs-12">
             <h2 class="font-weight-lighter">{{ pizza.style }}</h2>
-            <a data-toggle="popover" data-trigger="focus" data-placement="bottom" v-bind:data-content="pizza.dataContent">
+            <a v-b-popover.click.top="pizza.dataContent" :title="pizza.style">
             <img class="img-fluid pizza-img" :src="pizza.image" :alt="pizza.alt">
             </a>
           </div>
@@ -20,7 +20,7 @@
           <!-- v-for populates data from second object -->
           <div v-for="pizza in pizzaRowTwo" :key="pizza.id" class="col-lg-3 col-md-6 col-xs-12">
             <h2 class="font-weight-lighter">{{ pizza.style }}</h2>
-            <a data-toggle="popover" data-trigger="focus" data-placement="bottom" v-bind:data-content="pizza.dataContent">
+            <a v-b-popover.click.top="pizza.dataContent" :title="pizza.style">
             <img class="img-fluid pizza-img" :src="pizza.image" :alt="pizza.alt">
             </a>
           </div>
@@ -109,31 +109,24 @@ export default {
     Nav,
     Header,
     Footer
-  },
-
-  methods: {
-    // popover: function() {
-    //   this.popover('toggle')
-    // }
   }
-  // $(function() {
-  //   // popover displays pizza style info when clicked
-  //   $('a').click(function() {
-  //   $(this).popover('toggle')
-  //   })
-  // });
-
 }
 </script>
 
 <style lang="css" scoped>
 .main {
-    padding: 2rem 4rem;
+    padding: 6rem 4rem;
 }
 
 .pizza-img {
   width: 25rem;
-  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
   cursor: pointer;
+}
+
+@media screen and (max-width: 577px) {
+  .main {
+    padding: 6rem 0.5rem;
+  }
 }
 </style>

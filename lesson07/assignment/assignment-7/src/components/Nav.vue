@@ -5,7 +5,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav bg-light container-fluid ul text-uppercase text-center d-flex justify-content-around">
+          <ul class="navbar-nav container-fluid ul text-uppercase text-center d-flex justify-content-around">
             <router-link v-for="link in links" :key="link.id" :to="link.page" class="nav-link">
               {{link.text}}
             </router-link>
@@ -59,5 +59,12 @@ export default {
 .ul {
   margin: auto;
   padding: 2rem 0;
+  background-color: #F6AE8E
+}
+
+@media screen and (max-width: 577px) {
+  .nav {
+    background-color: #FEFAEE;
+  }
 }
 </style>

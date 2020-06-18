@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="footer">
     <footer>
-      <p class="text-center bg-light text-dark font-weight-light text-uppercase p-5 m-0">created 2020 by kevin belford</p>
+      <p class="font-weight-light text-uppercase m-0">created 2020 by kevin belford</p>
     </footer>
   </div>
 
@@ -14,4 +14,13 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E76F42;
+  height: 25vh;
+  color: #FEFAEE;
+}
+
 </style>

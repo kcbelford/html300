@@ -11,8 +11,8 @@
         <div v-for="pizzeria in pizzerias" :key="pizzeria.key" class="card">
           <div class="card-header" :id="pizzeria.headingId">
             <h2 class="mb-0">
-              <button class="btn btn-link collapsed text-danger" type="button" data-toggle="collapse" :data-target="pizzeria.dataTarget" aria-expanded="true" :aria-controls="pizzeria.collapseId">
-                <h2 class="text-dark font-weight-normal">{{pizzeria.name}}</h2>
+              <button class="btn collapsed" type="button" data-toggle="collapse" :data-target="pizzeria.dataTarget" aria-expanded="true" :aria-controls="pizzeria.collapseId">
+                <h2 class="font-weight-normal pizzeria-name">{{pizzeria.name}}</h2>
               </button>
             </h2>
           </div>
@@ -221,6 +221,20 @@ export default {
 
 <style lang="css" scoped>
 .main {
-    padding: 2rem 4rem;
+    padding: 6rem 4rem;
+}
+
+.pizzeria-name:hover {
+  color: #FA5D29;
+}
+
+@media screen and (max-width: 577px) {
+  .main {
+    padding: 6rem 0.5rem;
+  }
+
+  .pizzeria-name {
+    font-size: 1.15rem;
+  }
 }
 </style>

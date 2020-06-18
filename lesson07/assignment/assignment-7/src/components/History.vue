@@ -101,6 +101,12 @@ export default {
 
 <style lang="css" scoped>
 .main {
-    padding: 2rem 4rem;
+    padding: 6rem 4rem;
+}
+
+@media screen and (max-width: 577px) {
+  .main {
+    padding: 6rem 0.5rem;
+  }
 }
 </style>
