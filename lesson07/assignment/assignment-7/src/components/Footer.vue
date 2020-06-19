@@ -21,6 +21,7 @@ export default {
   background-color: #E76F42;
   height: 25vh;
   color: #FEFAEE;
+  letter-spacing: 2px;
 }
 
 </style>

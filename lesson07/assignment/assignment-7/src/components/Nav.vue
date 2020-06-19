@@ -6,7 +6,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav container-fluid ul text-uppercase text-center d-flex justify-content-around">
-            <router-link v-for="link in links" :key="link.id" :to="link.page" class="nav-link">
+            <router-link v-for="link in links" :key="link.id" :to="link.page" class="li">
               {{link.text}}
             </router-link>
           </ul>
@@ -58,8 +58,14 @@ export default {
 
 .ul {
   margin: auto;
-  padding: 2rem 0;
+  padding: 4rem 0;
   background-color: #F6AE8E
+}
+
+.li {
+  color: #FEFAEE;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 @media screen and (max-width: 577px) {
