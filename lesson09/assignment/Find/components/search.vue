@@ -182,9 +182,10 @@ h1 {
   /* display: none; */
   margin: 0;
   padding: 0.5rem;
-  position: fixed;
+  /* position: fixed; */
+  position: absolute;
   right: 20px;
-  bottom: 30px;
+  /* bottom: 30px; */
   z-index: 99;
   letter-spacing: 2px;
 }
