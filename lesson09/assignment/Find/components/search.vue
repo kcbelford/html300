@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="search-container">
+  <div class="search-container" id="top">
     <h1 v-if="!submitted" class="font-weight-light">{{ title }}</h1>
     <h1 v-if="submitted" class="font-weight-light">Here are your breweries!</h1>
     <p v-if="!submitted" class="intro lead text-uppercase" >Enter a brewery name, city or keyword to find your brewery:</p>
@@ -29,7 +29,7 @@
            </div>
         </div>
         <!-- back to top button -->
-        <button @click="toTop" class="btn top-btn">TOP</button>
+        <button @click="toTop" class="btn top-btn" id="myBtn">TOP</button>
       </div>
   </div>
 </template>
@@ -55,6 +55,7 @@ export default {
 
   head() {
     return {
+      scrolled: false,
       title: this.title,
       meta: [
         { hid: 'description', name: 'description', content: 'Enter a brewery name, city or keyword to find your new favorite brewery.' }
@@ -74,10 +75,27 @@ export default {
         })
         .finally(() => this.loading = false)
     },
-    toTop: function () {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
+    toTop: function() {
+      // document.body.scrollTop = 0;
+      // document.documentElement.scrollTop = 0;
+      const element = document.getElementById('top');
+      element.scrollIntoView({ behavior: 'smooth' });
+    },
+
+    // scrollFunc: function() {
+    //   const mybutton = document.getElementById('myBtn');
+    //   if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    //     mybutton.style.display = "block";
+    //   } else {
+    //     mybutton.style.display = "none";
+    //   }
+    // },
+    // mounted: function() {
+    //     window.addEventListener('scroll', this.scrollFunc);
+    // },
+    // destroyed: function() {
+    //     window.removeEventListener('scroll', this.scrollFunc);
+    // }
   }
 }
 </script>
@@ -161,10 +179,12 @@ h1 {
 
 /* back to top button */
 .top-btn {
+  /* display: none; */
   margin: 0;
   padding: 0.5rem;
-  position: absolute;
+  position: fixed;
   right: 20px;
+  bottom: 30px;
   z-index: 99;
   letter-spacing: 2px;
 }
