@@ -43,6 +43,7 @@ export default {
 <style lang="css" scoped>
 .about-container {
   text-align: center;
+  padding: 0 6rem 8rem;
 }
 
 h1 {
@@ -65,6 +66,6 @@ p {
 
 /* tablet media query */
 @media screen  and (max-width: 769px) {
-  
+
 }
 </style>

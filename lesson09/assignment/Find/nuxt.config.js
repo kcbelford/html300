@@ -10,7 +10,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Search for information on breweries across the United States to find the one you can call your own.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '~/static/find-logo-2.png' },
+      { rel: 'icon', type: 'image/x-icon', href: '/find.ico' },
       { rel: "stylesheet", type: "text/css", href: "https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" }
     ],
     script: [
