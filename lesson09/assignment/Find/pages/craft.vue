@@ -43,7 +43,7 @@ export default {
 <style lang="css" scoped>
 .craft-container {
   text-align: center;
-  padding: 0 6rem 8rem;
+  padding: 0 0 2rem;
 }
 
 h1 {

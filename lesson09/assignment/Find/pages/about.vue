@@ -43,7 +43,7 @@ export default {
 <style lang="css" scoped>
 .about-container {
   text-align: center;
-  padding: 0 6rem 8rem;
+  padding: 0 0 2rem;
 }
 
 h1 {
@@ -60,6 +60,10 @@ p {
 @media screen and (max-width: 577px) {
   p {
     padding: 0 1rem;
+  }
+
+  .about-container {
+    /* padding: 0; */
   }
 
 }
