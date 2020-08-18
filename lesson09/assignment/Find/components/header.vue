@@ -21,7 +21,7 @@ export default {
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 3rem;
   text-transform: uppercase;
   color: #697649;
   padding: 1rem 0;
@@ -48,11 +48,14 @@ export default {
 }
 
 .find-header {
+  background-image: url("../static/topographic-2.jpg");
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-top: 4rem;
+  /* border-top: 20px solid #24352B; */
 }
 
 /* mobile media query */

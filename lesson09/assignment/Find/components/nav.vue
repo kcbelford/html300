@@ -14,15 +14,6 @@
         </div>
       </nav>
     </div>
-
-  <!-- <nav>
-    <ul>
-      <nuxt-link to="/">FMB</nuxt-link>
-      <nuxt-link to="/about">About FMB</nuxt-link>
-      <nuxt-link to="/craft">What is Craft Beer?</nuxt-link>
-      <nuxt-link to="/favorites">My Favorites</nuxt-link>
-    </ul>
-  </nav> -->
 </template>
 
 <script>

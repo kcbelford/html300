@@ -80,22 +80,7 @@ export default {
       // document.documentElement.scrollTop = 0;
       const element = document.getElementById('top');
       element.scrollIntoView({ behavior: 'smooth' });
-    },
-
-    // scrollFunc: function() {
-    //   const mybutton = document.getElementById('myBtn');
-    //   if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    //     mybutton.style.display = "block";
-    //   } else {
-    //     mybutton.style.display = "none";
-    //   }
-    // },
-    // mounted: function() {
-    //     window.addEventListener('scroll', this.scrollFunc);
-    // },
-    // destroyed: function() {
-    //     window.removeEventListener('scroll', this.scrollFunc);
-    // }
+    }
   }
 }
 </script>
