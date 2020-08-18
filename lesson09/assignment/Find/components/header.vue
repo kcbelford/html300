@@ -49,13 +49,12 @@ export default {
 
 .find-header {
   background-image: url("../static/topographic-2.jpg");
-  background-size: cover;
+  background-size: contain;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-top: 4rem;
-  /* border-top: 20px solid #24352B; */
 }
 
 /* mobile media query */

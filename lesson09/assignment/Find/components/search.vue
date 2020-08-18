@@ -162,6 +162,10 @@ h1 {
   padding-right: 0.5rem;
 }
 
+.form-control {
+  width: 13rem;
+}
+
 /* back to top button */
 .top-btn {
   /* display: none; */
@@ -195,6 +199,10 @@ h1 {
 
   .brewery-p {
     font-size: 1rem;
+  }
+
+  .form-control {
+    width: 20rem;
   }
 }
 

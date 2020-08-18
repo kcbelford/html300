@@ -52,8 +52,9 @@ h1 {
 }
 
 p {
-  padding: 0 4rem;
+  padding: 0 6rem;
   text-align: left;
+  font-size: 1.5rem;
 }
 
 /* mobile media query */
