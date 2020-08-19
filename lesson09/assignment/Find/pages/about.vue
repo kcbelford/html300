@@ -62,11 +62,6 @@ p {
   p {
     padding: 0 1rem;
   }
-
-  .about-container {
-    /* padding: 0; */
-  }
-
 }
 
 /* tablet media query */

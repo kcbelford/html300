@@ -14,7 +14,7 @@ export default {
 <style lang="css" scoped>
 .footer-container {
   position: relative;
-  min-height: 40vh;
+  min-height: 50vh;
 }
 
 .footer {

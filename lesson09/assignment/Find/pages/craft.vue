@@ -62,7 +62,6 @@ p {
   p {
     padding: 0 1rem;
   }
-
 }
 
 /* tablet media query */
