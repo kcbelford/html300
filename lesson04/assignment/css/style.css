@@ -1,6 +1,13 @@
 * {
   box-sizing: border-box; }
 
+body {
+  width: 100%;
+  margin: 0; }
+
+header {
+  width: 100%; }
+
 .clink {
   font-size: 1rem;
   text-transform: lowercase;
@@ -16,8 +23,8 @@
 .main {
   margin: 0;
   padding-top: 4rem;
-  width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center; }
   .main__left-pint {
@@ -57,3 +64,17 @@
   color: #FFFFFF;
   border-radius: 4px;
   background-color: #AFAFAF; }
+
+@media screen and (max-width: 577px) {
+  .main__left-pint {
+    width: 9rem;
+    padding-right: 4rem; }
+  .main__right-pint {
+    width: 9rem;
+    padding-left: 4rem; }
+  @keyframes leftpint {
+    50% {
+      transform: translate(42%, 0) rotate(25deg); } }
+  @keyframes rightpint {
+    50% {
+      transform: translate(-42%, 0) rotate(-25deg); } } }

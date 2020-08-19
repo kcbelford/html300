@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 100%;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+}
+
 // the word "clink!"
 .clink {
   font-size: 1rem;
@@ -22,8 +31,8 @@
 .main {
   margin: 0;
   padding-top: 4rem;
-  width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
     &__left-pint {
@@ -71,4 +80,31 @@
 // "cheers!" button
 .button {
   @include button;
+}
+
+@media screen and (max-width: 577px) {
+
+  .main__left-pint {
+    width: 9rem;
+    padding-right: 4rem;
+  }
+
+  .main__right-pint {
+    width: 9rem;
+    padding-left: 4rem;
+  }
+
+  @keyframes leftpint {
+  // moves left pint right and rotates it 25 degrees clockwise
+    50% {
+      transform: translate(42%, 0) rotate(25deg);
+    }
+  }
+
+  @keyframes rightpint {
+  // moves right pint left and rotates it 25 degrees counter clockwise
+    50% {
+      transform: translate(-42%, 0) rotate(-25deg);
+    }
+  }
 }
